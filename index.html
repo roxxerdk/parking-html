@@ -1,0 +1,223 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Parking Slot Booking
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            const slots = document.querySelectorAll('.slot');
+            slots.forEach(slot => {
+                slot.addEventListener('click', function() {
+                    const slotName = this.querySelector('h3').innerText;
+                    const slotStatus = this.querySelector('p').innerText;
+                    alert(`You clicked on ${slotName} which is ${slotStatus}`);
+                });
+            });
+        });
+  </script>
+ </head>
+ <body class="bg-gray-100">
+  <header class="bg-blue-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     Parking Slot Booking
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto mt-8 p-4">
+   <section class="bg-white p-6 rounded shadow-md">
+    <h2 class="text-xl font-bold mb-4">
+     Book Your Parking Slot
+    </h2>
+    <form class="space-y-4">
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="name">
+       Name
+      </label>
+      <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="name" name="name" type="text"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="email">
+       Email
+      </label>
+      <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="email" name="email" type="email"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="date">
+       Date
+      </label>
+      <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="date" name="date" type="date"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="time">
+       Time
+      </label>
+      <input class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="time" name="time" type="time"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700" for="slot">
+       Select Slot
+      </label>
+      <select class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="slot" name="slot">
+       <option value="A1">
+        A1
+       </option>
+       <option value="A2">
+        A2
+       </option>
+       <option value="A3">
+        A3
+       </option>
+       <option value="B1">
+        B1
+       </option>
+       <option value="B2">
+        B2
+       </option>
+       <option value="B3">
+        B3
+       </option>
+       <option value="C1">
+        C1
+       </option>
+       <option value="C2">
+        C2
+       </option>
+       <option value="C3">
+        C3
+       </option>
+      </select>
+     </div>
+     <button class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700" type="submit">
+      Book Now
+     </button>
+    </form>
+   </section>
+   <section class="mt-8">
+    <h2 class="text-xl font-bold mb-4">
+     Available Slots
+    </h2>
+    <div class="grid grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot A1" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/sqLCyXygrC6cPlH1qBElYpmYtwVlaobhAAtt9BtoimHikz8E.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot A1
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot A2" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/tr5J3CaudX5XEB9HcIm5NkSDpuramgAkiQQk5eTpjEtAJn5JA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot A2
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot A3" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/YCcviXvX3mrDFV2SYM20IMjagRnWAsAYdsaQyRhrO48gkz8E.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot A3
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot B1" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/nOpatMOj6TrRK1nfzSfeKjiM1oW2ysTQUSrex06AjtBWI5MPB.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot B1
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot B2" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/CxXOGrFKlobXA9jWVq6tFNQF4dOBJ9lns9nVOEflqcfHSOzTA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot B2
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot B3" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/0p81wPUjaAZeNqcRvzEBtXKsv2jkayexOZLWfRfCfMWkQyZeE.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot B3
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot C1" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/TrOVXJ04q0b9BhbqTg3i4pfoOsY3kISpyzTwbfw2SW7JSOzTA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot C1
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot C2" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/7kLDK0pVdkb5LRfXHkSpv46CymdtyQWakKOefQQqnEkUkcmnA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot C2
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md slot">
+      <img alt="Image of parking slot C3" class="w-full h-32 object-cover rounded" height="200" src="https://storage.googleapis.com/a1aa/image/Hzeun9nHGHVBXC70b4cIfzbtY2OIJhhfAplykokSuekKI5MPB.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-2">
+       Slot C3
+      </h3>
+      <p class="text-gray-600">
+       Available
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-blue-600 text-white p-4 mt-8">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2023 Parking Slot Booking. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
